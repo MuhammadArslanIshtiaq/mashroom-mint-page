@@ -155,7 +155,7 @@ function Home() {
     const abi = await abiResponse.json();
     var contract = new Contract(
       abi,
-      "0xDe484896C9bafD02B21160bB0c314D39EAAeC030"
+      "0xd0E212177d23e306f513a1398b227fc81465f8aC"
     );
     contract.setProvider(web3.currentProvider);
     // Get Total Supply
@@ -222,6 +222,8 @@ function Home() {
     <>
       {loading && <Loader />}
 
+      <div className="overlay-status">{statusAlert}</div>
+
       <header>
         <nav className="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
           <div className="container-fluid d-flex justify-content-end">
@@ -244,9 +246,9 @@ function Home() {
       </header>
 
       <div className="hero d-flex flex-column justify-content-center">
-        <div class="container  d-flex  justify-content-center">
+        <div className="container  d-flex  justify-content-center">
           <a href="#mintForm">
-            <button type="button" class="btn btn-success btn-lg my-4">
+            <button type="button" className="btn btn-success btn-lg my-4">
               Learn more
             </button>
           </a>
@@ -256,8 +258,8 @@ function Home() {
       <div className="container">
         <div className="row my-5 pt-5 g-5">
           <div className="col-lg-6 col-md-12 d-flex justify-content-center">
-            <div class="mint-form" id="mintForm">
-              {/* <img src="config/images/btn-mint.png" class="" /> */}
+            <div className="mint-form" id="mintForm">
+              {/* <img src="config/images/btn-mint.png" className="" /> */}
               <div>
                 <div className="text-normal my-4 fs-2">Mint Price:</div>
                 <div className="text-bold my-4 fs-2">FREE (gas only)</div>
@@ -340,7 +342,7 @@ function Home() {
             </div>
           </div>
           <div className="col-lg-6 col-md-12 d-flex justify-content-end">
-            <ul role="list" class="text-white fs-3 my-5">
+            <ul role="list" className="text-white fs-3 my-5">
               <li className="pb-2">
                 <strong>No Roadmap</strong>
               </li>
@@ -379,10 +381,10 @@ function Home() {
       <div className="container">
         <div className="row my-5 pt-5 g-5">
           <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center text-white">
-            <h1 class="display-3 fw-bold text-lg-start text-center">
+            <h1 className="display-3 fw-bold text-lg-start text-center">
               THE MOONRUNNERS ARE TAKING OVER
             </h1>
-            <p class="fs-4 lh-lg my-4 text-lg-start text-center">
+            <p className="fs-4 lh-lg my-4 text-lg-start text-center">
               A collection of 10,000 handcrafted PFPs. For the longest time,
               this Wolfpack lived in harmony and peace on Primordia among
               humankind, but one month would change the course of history
@@ -395,47 +397,47 @@ function Home() {
         </div>
 
         <div className="row pt-5 g-5 text-white">
-          <h1 class="display-3 fw-bold"> FAQs</h1>
+          <h1 className="display-3 fw-bold"> FAQs</h1>
         </div>
 
         <div className="row pt-5 g-5">
           <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center text-white">
-            <p class="fs-3 my-4 fw-bold">
+            <p className="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
-            <p class="fs-5 fw-light lh-lg">
+            <p className="fs-5 fw-light lh-lg">
               No, we are a Twitter focused project. We wanted to cut out the
               noise and need to go to Discord to stay up to date.
             </p>
 
-            <p class="fs-3 my-4 fw-bold">
+            <p className="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
-            <p class="fs-5 fw-light lh-lg">
+            <p className="fs-5 fw-light lh-lg">
               No, we are a Twitter focused project. We wanted to cut out the
               noise and need to go to Discord to stay up to date.
             </p>
 
-            <p class="fs-3 my-4 fw-bold">
+            <p className="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
-            <p class="fs-5 fw-light lh-lg">
+            <p className="fs-5 fw-light lh-lg">
               No, we are a Twitter focused project. We wanted to cut out the
               noise and need to go to Discord to stay up to date.
             </p>
           </div>
           <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-start text-white">
-            <p class="fs-3 my-4 fw-bold">
+            <p className="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
-            <p class="fs-5 fw-light lh-lg">
+            <p className="fs-5 fw-light lh-lg">
               No, we are a Twitter focused project. We wanted to cut out the
               noise and need to go to Discord to stay up to date.
             </p>
-            <p class="fs-3 my-4 fw-bold">
+            <p className="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
-            <p class="fs-5 fw-light lh-lg">
+            <p className="fs-5 fw-light lh-lg">
               No, we are a Twitter focused project. We wanted to cut out the
               noise and need to go to Discord to stay up to date.
             </p>
