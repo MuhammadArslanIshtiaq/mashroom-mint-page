@@ -264,19 +264,78 @@ function Home() {
               </div>
               <div>
                 <div className="text-normal my-4 fs-2">Total Supply:</div>
-                <div className="text-bold my-4 fs-2">10.000</div>
+                <div className="text-bold my-4 fs-2">{CONFIG.MAX_SUPPLY}</div>
               </div>
               <div>
                 <div className="text-normal my-4 fs-2">Remaining Supply:</div>
-                <div className="text-bold my-4 fs-2">?</div>
+                <div className="text-bold my-4 fs-2">
+                  {CONFIG.MAX_SUPPLY - supply}
+                </div>
               </div>
               <div>
                 <div className="text-normal my-4 fs-2">Max 2 per wallet!</div>
               </div>
               <div>
-                <button type="button" class="btn btn-success btn-lg my-4">
-                  CONNECT WALLET
-                </button>
+                <s.FlexContainer jc={"center"} ai={"center"} fd={"row"}>
+                  {blockchain.account !== "" &&
+                  blockchain.smartContract !== null &&
+                  blockchain.errorMsg === "" ? (
+                    <s.Container ai={"center"} jc={"center"} fd={"row"}>
+                      <s.connectButton
+                        disabled={disable}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          claimNFTs();
+                        }}
+                      >
+                        {claimingNft ? "Confirm Transaction in Wallet" : "Mint"}
+                        {/* {mintDone && !claimingNft  ? feedback : ""} */}
+                      </s.connectButton>{" "}
+                    </s.Container>
+                  ) : (
+                    <>
+                      {/* {blockchain.errorMsg === "" ? ( */}
+                      <s.connectButton
+                        style={{
+                          textAlign: "center",
+                          color: "#d5c97d",
+                          cursor: "pointer",
+                        }}
+                        disabled={state == 0 ? 1 : 0}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          dispatch(connectWallet());
+                          getData();
+                        }}
+                      >
+                        Connect Wallet
+                      </s.connectButton>
+                      {/* ) : ("")} */}
+                    </>
+                  )}
+                  <s.SpacerLarge />
+                  {blockchain.errorMsg !== "" ? (
+                    <s.connectButton
+                      style={{
+                        textAlign: "center",
+                        color: "#d5c97d",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {blockchain.errorMsg}
+                    </s.connectButton>
+                  ) : (
+                    <s.TextDescription
+                      style={{
+                        textAlign: "center",
+                        color: "#d5c97d",
+                        cursor: "pointer",
+                      }}
+                    >
+                      {feedback}
+                    </s.TextDescription>
+                  )}
+                </s.FlexContainer>
               </div>
             </div>
           </div>
