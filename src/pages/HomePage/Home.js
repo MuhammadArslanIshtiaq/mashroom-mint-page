@@ -379,8 +379,10 @@ function Home() {
       <div className="container">
         <div className="row my-5 pt-5 g-5">
           <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center text-white">
-            <h1 class="display-2">THE MOONRUNNERS ARE TAKING OVER</h1>
-            <p class="fs-4 lh-lg my-4">
+            <h1 class="display-3 fw-bold text-lg-start text-center">
+              THE MOONRUNNERS ARE TAKING OVER
+            </h1>
+            <p class="fs-4 lh-lg my-4 text-lg-start text-center">
               A collection of 10,000 handcrafted PFPs. For the longest time,
               this Wolfpack lived in harmony and peace on Primordia among
               humankind, but one month would change the course of history
@@ -393,12 +395,12 @@ function Home() {
         </div>
 
         <div className="row pt-5 g-5 text-white">
-          <h1 class="display-1"> FAQs</h1>
+          <h1 class="display-3 fw-bold"> FAQs</h1>
         </div>
 
         <div className="row pt-5 g-5">
           <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-center text-white">
-            <p class="fs-3 my-4 ">
+            <p class="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
             <p class="fs-5 fw-light lh-lg">
@@ -406,7 +408,7 @@ function Home() {
               noise and need to go to Discord to stay up to date.
             </p>
 
-            <p class="fs-3 my-4 ">
+            <p class="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
             <p class="fs-5 fw-light lh-lg">
@@ -414,7 +416,7 @@ function Home() {
               noise and need to go to Discord to stay up to date.
             </p>
 
-            <p class="fs-3 my-4 ">
+            <p class="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
             <p class="fs-5 fw-light lh-lg">
@@ -423,14 +425,14 @@ function Home() {
             </p>
           </div>
           <div className="col-lg-6 col-md-12 d-flex flex-column justify-content-start text-white">
-            <p class="fs-3 my-4 ">
+            <p class="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
             <p class="fs-5 fw-light lh-lg">
               No, we are a Twitter focused project. We wanted to cut out the
               noise and need to go to Discord to stay up to date.
             </p>
-            <p class="fs-3 my-4 ">
+            <p class="fs-3 my-4 fw-bold">
               <strong>Is there a Discord?</strong>
             </p>
             <p class="fs-5 fw-light lh-lg">
