@@ -275,7 +275,7 @@ function Home() {
                 </div>
               </div>
               <div>
-                <div className="text-normal my-4 fs-2">Max 2 per wallet!</div>
+                <div className="text-normal my-4 fs-2">Max 10 per wallet!</div>
               </div>
               <div>
                 <s.FlexContainer jc={"center"} ai={"center"} fd={"row"}>
